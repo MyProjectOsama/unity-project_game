@@ -1,0 +1,4 @@
+repository "2d_learn@OKanjo@cloud"
+  path "/"
+    br "/main"
+    co "/main"

@@ -5,12 +5,12 @@ using UnityEngine.Tilemaps;
 
 public class gorunmezkolaid : MonoBehaviour
 {
-    SpriteRenderer spr;
+    Tilemap spr;
     [SerializeField] float hiz = 5.1f;
     // Start is called before the first frame update
     void Start()
     {
-        spr = GetComponent<SpriteRenderer>();
+        spr = GetComponent<Tilemap>();
     }
 
     // Update is called once per frame

@@ -12,28 +12,29 @@ public class player_controler : MonoBehaviour
     [SerializeField] float speed = 0.03f;
     [SerializeField] float jump = 11.9f;
     [SerializeField] float ziplayan = 15.5f;
+    [SerializeField] TextMeshProUGUI TextHealth;
+    [SerializeField] TextMeshProUGUI TextScore;
+    public int player_helth = 100;
+    public int score;
+    public bool die;
     string hor = "Horizontal";
     string ver = "Vertical";
+    bool isjump;
     Rigidbody2D rb;
     SpriteRenderer sprite;
     Transform trans;
     Animator anim;
-    bool isjump;
-    public int player_helth = 100;
+    gorunmezkolaid gorunmezkolaid = new gorunmezkolaid();
     Vector3 startplan = new Vector3(-6,2.68f,0);
-    public int score;
-    [SerializeField] TextMeshProUGUI TextHealth;
-    [SerializeField] TextMeshProUGUI TextScore;
-
     void Start()
     {
+        die = false;
         score = 0;
         isjump = false;
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         trans = GetComponent<Transform>();
         anim = GetComponent<Animator>();
-
         TextHealth.text =player_helth +"";
         TextScore.text = score + "";
     }
@@ -96,11 +97,7 @@ public class player_controler : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("deai"))
         {
-           
-            trans.position = startplan;
-            player_helth = 100;
-            TextHealth.text = player_helth + "";
-
+            IsDie();
         }
         else if (collision.gameObject.CompareTag("enemiygarga"))
         {
@@ -118,9 +115,7 @@ public class player_controler : MonoBehaviour
                 if (player_helth <= 0)
                 {
                     Debug.Log("daei");
-                    trans.position = startplan;
-                    player_helth = player_helth + 100;
-                    TextHealth.text = player_helth + "";
+                    IsDie();
                 }
             }
 
@@ -153,9 +148,7 @@ public class player_controler : MonoBehaviour
                 if (player_helth <= 0)
                 {
                     Debug.Log("daei");
-                    trans.position = startplan;
-                    player_helth = player_helth + 100;
-                    TextHealth.text = player_helth + "";
+                    IsDie();
                 }
             }
 
@@ -179,7 +172,15 @@ public class player_controler : MonoBehaviour
 
     }
   
-
+  void IsDie()
+    {
+        die=true;
+        gorunmezkolaid.HidingTheBox();
+        trans.position = startplan;
+        player_helth = 100;
+        TextHealth.text = player_helth + "";
+        die = false;
+    }
             
         
 

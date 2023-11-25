@@ -24,7 +24,7 @@ public class player_controler : MonoBehaviour
     SpriteRenderer sprite;
     Transform trans;
     Animator anim;
-    gorunmezkolaid gorunmezkolaid = new gorunmezkolaid();
+    //gorunmezkolaid gorunmezkolaid = new gorunmezkolaid();
     Vector3 startplan = new Vector3(-6,2.68f,0);
     void Start()
     {
@@ -178,7 +178,7 @@ public class player_controler : MonoBehaviour
         trans.position = startplan;
         player_helth = 100;
         TextHealth.text = player_helth + "";
-        gorunmezkolaid.sprTilmap.color = Color.clear; 
+        //gorunmezkolaid.sprTilmap.color = Color.clear; 
     }
 
 

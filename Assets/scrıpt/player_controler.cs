@@ -175,13 +175,12 @@ public class player_controler : MonoBehaviour
   void IsDie()
     {
         die=true;
-        gorunmezkolaid.HidingTheBox();
         trans.position = startplan;
         player_helth = 100;
         TextHealth.text = player_helth + "";
-        die = false;
+        gorunmezkolaid.sprTilmap.color = Color.clear; 
     }
-            
-        
+
+
 
 }

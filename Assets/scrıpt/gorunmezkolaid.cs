@@ -6,11 +6,11 @@ using UnityEngine.Tilemaps;
 public class gorunmezkolaid : MonoBehaviour
 {
     [SerializeField] float hiz = 5.1f;
-    Tilemap spr;
+    public Tilemap sprTilmap;
     // Start is called before the first frame update
     void Start()
     {
-        spr = GetComponent<Tilemap>();
+        sprTilmap = GetComponent<Tilemap>();
     }
     // Update is called once per frame
     void Update()
@@ -19,7 +19,7 @@ public class gorunmezkolaid : MonoBehaviour
     }
     public void HidingTheBox( )
     {
-            spr.color += new Color(0, 0, 0, 0); 
+        sprTilmap.color += new Color(0, 0, 0, 0); 
     }
 private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -27,17 +27,17 @@ private void OnCollisionEnter2D(Collision2D collision)
         {
 
             // spr.color = Color.green * Time.deltaTime *hiz;
-            spr.color += new Color(255, 255, 255, 255);
+            sprTilmap.color += new Color(255, 255, 255, 255);
 
         }
     }
     
-    /*private void OnCollisionExit2D(Collision2D collision)
+  /* private void OnCollisionExit2D(Collision2D collision)
     {
        
         if (collision.gameObject) {
 
-            spr.color += new Color(0, 0, 0, 0);
+            sprTilmap.color = Color.clear;
         }
     }*/
 }

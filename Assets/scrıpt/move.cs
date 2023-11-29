@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class move : MonoBehaviour
 {
-    public float speed = 1f;
+    public float speed = 10f;
     void Start()
     {
-        Destroy(gameObject, 5);
+        Destroy(gameObject, 2);
     }
 
 

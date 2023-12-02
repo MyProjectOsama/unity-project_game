@@ -1741,8 +1741,8 @@ GameObject:
   m_Component:
   - component: {fileID: 293157049}
   - component: {fileID: 293157048}
-  - component: {fileID: 293157047}
   - component: {fileID: 293157052}
+  - component: {fileID: 293157047}
   - component: {fileID: 293157050}
   - component: {fileID: 293157051}
   m_Layer: 0
@@ -1884,11 +1884,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 293157046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72a30b8dca7725f4c9cc3a757391290d, type: 3}
+  m_Script: {fileID: 11500000, guid: 869c8d3b7999af747a957abbc688a355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 16
-  jump: 14
+  speed: 0.03
+  jump: 11.9
   ziplayan: 15.5
   TextHealth: {fileID: 2131367288}
   TextScore: {fileID: 360322554}
@@ -41190,8 +41190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf5bebd2051afdf4fa4e0fa78591b8a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hiz: 5.1
-  sprTilmap: {fileID: 0}
 --- !u!4 &1328420706 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5281222998055281320, guid: 9128690fba9b54e458926f07e5b6f862, type: 3}
